@@ -9,7 +9,7 @@
   </head>
   <body style="background:black;">
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=540 height=720></canvas>
+      <canvas id="unity-canvas" width=540 height=720 style="image-rendering: pixelated;"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -58,7 +58,7 @@
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/webgl.loader.js";
       var config = {
-        dataUrl: buildUrl + "/6d42109cbb2314b741a99667fba6f346.data.unityweb",
+        dataUrl: buildUrl + "/a3269de8bd4a83717b8d70e979f32b16.data.unityweb",
         frameworkUrl: buildUrl + "/0c03089379259acafbbac090e6c9127a.js.unityweb",
         codeUrl: buildUrl + "/c1e2d8d0ebf51335ab54b63f304e82a8.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
@@ -95,7 +95,7 @@
 
         canvas.style.width = "540px";
         canvas.style.height = "720px";
-        config.devicePixelRatio = 0.75;
+        config.devicePixelRatio = 0.6;
           loadingBar.style.display = "block";
 
           var script = document.createElement("script");
