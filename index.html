@@ -6,6 +6,13 @@ html{
     background:transparent;
 }
 </style>
-<span id="play" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);cursor:pointer;width:200px;height:55pt;line-height:55pt;text-align:center;font-size:36pt;padding:0;color:white;filter:drop-shadow(0 0 3px black);border:3px solid white;">Play</span>
-<script>document.getElementById("play").onclick=()=>{location.href="./Full/index.html";};</script>
+<span id="play" style="position:absolute;left:50%;top:50%;transition:transform 0.2s, filter 0.2s;transform:translate(-50%,-50%);cursor:pointer;width:200px;height:55pt;line-height:55pt;text-align:center;font-size:18pt;padding:0;color:white;filter:drop-shadow(0 0 3px black);border:3px solid white;">Play</span>
+<script>let d =document.getElementById("play");
+if(/zh/i.test(navigator.language)){
+    d.innerText="在线试玩";
+}
+d.onclick=()=>{location.href="./Full/index.html";};
+d.onmouseenter=()=>{d.style.filter="drop-shadow(0 0 3px black) invert(100%)";d.style.transform+="scale(1.2)";};
+d.onmouseleave=()=>{d.style.filter="drop-shadow(0 0 3px black)";d.style.transform="translate(-50%,-50%)";};
+</script>
 </html>
